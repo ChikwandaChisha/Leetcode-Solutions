@@ -21,4 +21,23 @@ class Solution:
                 return False
         
         return True
+    
+    
+        # if len(s) % 2 != 0 :
+        #     return False
+        # brackets = {"}":"{", "]":"[", ")":"("}
+        # stack = []
+        # for i in s:
+        #     if i in brackets:
+        #         if stack and stack[-1] == brackets[i]:
+        #             stack.pop()
+        #         else:
+        #             return False
+        #     else:
+        #         stack.append(i)
+    
+        # if len(stack) == 0:
+        #     return True
+        # return False
+
         
