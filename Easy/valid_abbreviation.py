@@ -13,14 +13,16 @@ class Solution:
                         return False
                     word_ind += skip - 1 # update word_ind to count for the skips
                     
-                if word_ind > len(word) or word[word_ind] != abbr[i]: # check if out of index bounds or if the characters are the same
+                if word_ind >= len(word) or word[word_ind] != abbr[i]: # check if out of index bounds or if the characters are the same
                     return False
                 word_ind += 1 # increase word_ind by 1 after the check
                 num = "" # reset num
         
-        # check if the last number is zero
+        # in case the last character is a digit
         if num != "":
-            if num == "0": 
+            skip = int(num)
+            if skip == 0:
                 return False
-        
+            word_ind += skip # update word_in for the last time
+            
         return word_ind == len(word)
